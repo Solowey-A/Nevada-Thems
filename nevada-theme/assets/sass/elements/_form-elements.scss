@@ -1,0 +1,145 @@
+// All elements Form
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+input[type='url'],
+input[type='search'],
+input[type='password'],
+textarea,
+select {
+  font-family: inherit;
+  width: 100%;
+  max-width: 100%;
+  background: none;
+  outline: 0 none;
+  background-color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+
+.contacts_wrap {
+  .wpcf7-mail-sent-ok{
+    position: absolute;
+    bottom: 30px;
+  }
+  .wpcf7 {
+    border: 2px solid #781241;
+    height: 500px;
+    width: 488px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    @include max-w($screen-sm) {
+      width: 290px;
+      padding: 15px;
+      height: 445px;
+    }
+  }
+
+  .wpcf7-form-control-wrap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    border: transparent;
+    height: 53px;
+  }
+
+  .wpcf7-form-control {
+    background: transparent;
+    border: transparent;
+    position: absolute;
+    bottom: 0;
+    border-bottom: 1px solid $border-third-color;
+    transition: 0.4s;
+
+    &:focus{
+      border-color: $border-fourth-color;
+    }
+  }
+
+  .filed_label {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 25px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .group {
+    min-height: 53px;
+    position: relative;
+    width: 100%;
+  }
+}
+
+.message-wrap{
+  height: 153px;
+  position: relative;
+  margin-bottom: 35px;
+  transition: 0.4s;
+
+  .message{
+    position: absolute;
+    top: 0;
+  }
+
+  @include max-w($screen-sm){
+    margin: 0 0 20px 0;
+ }
+}
+
+#message{
+  height: 30px;
+  position: absolute;
+  bottom: 0;
+  resize: none;
+  transition: 0.4s;
+  border: transparent;
+
+  @include max-w($screen-sm){
+    margin: 0;
+  }
+}
+
+.textarea-504{
+  position: absolute;
+  top: 0;
+}
+
+.message-label{
+  position: absolute;
+  top: 20px;
+}
+
+.filed_label{
+  transition: 0.4s ease-in-out;
+  position: absolute;
+  top: 20px;
+}
+
+.message-line{
+  border-bottom: 1px solid $border-third-color;
+  width: 100%;
+  position: absolute;
+  bottom: -100px;
+}
+
+.label_focus {
+  transition: 0.4s ease-in-out;
+  top: -5%;
+  font-size: $fifth-font-size;
+  color: $fifth-color;
+  ~.message-line{
+    border-color: $border-fourth-color;
+  }
+}
+
+
+
+
